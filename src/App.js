@@ -5,10 +5,11 @@ import imageRickMorty from './img/rick-morty.png'
 
 function App() {
   const [characters, setCharacters] = useState(null);
+  
   const reqApi = async () => {
   const api = await fetch('https://rickandmortyapi.com/api/character');
   const characterApi = await api.json();
-  // console.log(characterApi);
+  console.log(characterApi);
   setCharacters(characterApi.results);
   }
 
